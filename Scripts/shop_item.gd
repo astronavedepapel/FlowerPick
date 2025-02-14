@@ -47,3 +47,5 @@ func _on_input_event(_viewport, _event, _shape_idx):
 				Global.inventory[seedType]["Seeds"] += 1
 			if itemType == "vase":
 				Global.Vases += 1
+#			if itemType == "upgrade":
+#				Global.upgrades[upgrade] = true

@@ -15,7 +15,7 @@
 script = ExtResource("1_i8st4")
 
 [node name="Camera" type="Camera2D" parent="."]
-offset = Vector2(275, 315)
+anchor_mode = 0
 
 [node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("2_r8xwg")
