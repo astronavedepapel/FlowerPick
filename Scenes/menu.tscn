@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://menu.gd" id="1_i300p"]
 [ext_resource type="Texture2D" uid="uid://bsv5odmr8is10" path="res://Assets/Sprites/bg-blooming-2.png" id="2_h8ofo"]
 [ext_resource type="FontFile" uid="uid://b140s7uqclbem" path="res://Assets/Fonts/Coopers Town.otf" id="3_8aibu"]
-[ext_resource type="FontFile" path="res://Assets/Fonts/introheadr-base.otf" id="4_nliic"]
+[ext_resource type="FontFile" uid="uid://m46nfgev8f85" path="res://Assets/Fonts/introheadr-base.otf" id="4_nliic"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cr6n6"]
 texture = ExtResource("2_h8ofo")
