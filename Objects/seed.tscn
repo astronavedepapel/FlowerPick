@@ -4,7 +4,8 @@
 [ext_resource type="Script" path="res://Scripts/seed.gd" id="1_45mb3"]
 [ext_resource type="PackedScene" uid="uid://dk8gw62qrccoy" path="res://Nodes/Draggable.tscn" id="2_a63rd"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3v5y3"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pes6s"]
+resource_local_to_scene = true
 size = Vector2(40, 52)
 
 [node name="Seed" type="Node2D" groups=["seeds"]]
@@ -15,11 +16,13 @@ texture = ExtResource("1_34mam")
 
 [node name="DraggableComponent" parent="." instance=ExtResource("2_a63rd")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DraggableComponent"]
-shape = SubResource("RectangleShape2D_3v5y3")
+[node name="Area" parent="DraggableComponent" index="0"]
+shape = SubResource("RectangleShape2D_pes6s")
 
 [node name="Amount" type="Label" parent="."]
 offset_left = 18.0
 offset_top = 22.0
 offset_right = 58.0
 offset_bottom = 45.0
+
+[editable path="DraggableComponent"]
