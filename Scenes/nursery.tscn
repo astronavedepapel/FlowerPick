@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://brml6lojrrrc8"]
+[gd_scene load_steps=14 format=3 uid="uid://brml6lojrrrc8"]
 
 [ext_resource type="Script" path="res://Scripts/nursery.gd" id="1_i8st4"]
 [ext_resource type="Texture2D" uid="uid://bmuxchiuwxdf7" path="res://Assets/Sprites/background.jpg" id="2_r8xwg"]
@@ -11,6 +11,18 @@
 [ext_resource type="Texture2D" uid="uid://wcf7gv30jp5j" path="res://Assets/Sprites/seed3.png" id="6_nwabw"]
 [ext_resource type="PackedScene" uid="uid://b3oni7mwmfd75" path="res://Objects/water.tscn" id="7_0amaj"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_45ayf"]
+resource_local_to_scene = true
+size = Vector2(40, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6xo0o"]
+resource_local_to_scene = true
+size = Vector2(40, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqlge"]
+resource_local_to_scene = true
+size = Vector2(40, 52)
+
 [node name="Nursery" type="Node2D"]
 script = ExtResource("1_i8st4")
 
@@ -22,63 +34,63 @@ texture = ExtResource("2_r8xwg")
 offset = Vector2(250, 315)
 
 [node name="Vases" type="Node2D" parent="."]
-position = Vector2(50, 170)
 
 [node name="Vase1" parent="Vases" instance=ExtResource("3_x60f8")]
+position = Vector2(49, 168)
 
 [node name="Vase2" parent="Vases" instance=ExtResource("3_x60f8")]
-position = Vector2(100, 0)
+position = Vector2(149, 168)
 
 [node name="Vase3" parent="Vases" instance=ExtResource("3_x60f8")]
-position = Vector2(200, 0)
+position = Vector2(249, 168)
 owned = false
 
 [node name="Vase4" parent="Vases" instance=ExtResource("3_x60f8")]
-position = Vector2(300, 0)
+position = Vector2(349, 168)
 owned = false
 
 [node name="Vase5" parent="Vases" instance=ExtResource("3_x60f8")]
-position = Vector2(400, 0)
+position = Vector2(449, 168)
 owned = false
 
 [node name="Vase6" parent="Vases" instance=ExtResource("3_x60f8")]
-position = Vector2(0, 163)
+position = Vector2(49, 331)
 owned = false
 
 [node name="Vase7" parent="Vases" instance=ExtResource("3_x60f8")]
-position = Vector2(100, 163)
+position = Vector2(149, 331)
 owned = false
 
 [node name="Vase8" parent="Vases" instance=ExtResource("3_x60f8")]
-position = Vector2(200, 163)
+position = Vector2(249, 331)
 owned = false
 
 [node name="Vase9" parent="Vases" instance=ExtResource("3_x60f8")]
-position = Vector2(300, 163)
+position = Vector2(349, 331)
 owned = false
 
 [node name="Vase10" parent="Vases" instance=ExtResource("3_x60f8")]
-position = Vector2(400, 163)
+position = Vector2(449, 331)
 owned = false
 
 [node name="Vase11" parent="Vases" instance=ExtResource("3_x60f8")]
-position = Vector2(0, 330)
+position = Vector2(49, 498)
 owned = false
 
 [node name="Vase12" parent="Vases" instance=ExtResource("3_x60f8")]
-position = Vector2(100, 330)
+position = Vector2(149, 498)
 owned = false
 
 [node name="Vase13" parent="Vases" instance=ExtResource("3_x60f8")]
-position = Vector2(200, 330)
+position = Vector2(249, 498)
 owned = false
 
 [node name="Vase14" parent="Vases" instance=ExtResource("3_x60f8")]
-position = Vector2(300, 330)
+position = Vector2(349, 498)
 owned = false
 
 [node name="Vase15" parent="Vases" instance=ExtResource("3_x60f8")]
-position = Vector2(400, 330)
+position = Vector2(449, 498)
 owned = false
 
 [node name="Daisy" parent="." instance=ExtResource("4_4y6w2")]
@@ -86,6 +98,9 @@ position = Vector2(50, 570)
 amount = 3
 seedType = "Daisy"
 price = 3
+
+[node name="Area" parent="Daisy/DraggableComponent" index="0"]
+shape = SubResource("RectangleShape2D_45ayf")
 
 [node name="Buttercup" parent="." instance=ExtResource("4_4y6w2")]
 position = Vector2(150, 570)
@@ -97,6 +112,9 @@ price = 2
 [node name="Sprite2D" parent="Buttercup" index="0"]
 texture = ExtResource("5_ptsnh")
 
+[node name="Area" parent="Buttercup/DraggableComponent" index="0"]
+shape = SubResource("RectangleShape2D_6xo0o")
+
 [node name="Tulip" parent="." instance=ExtResource("4_4y6w2")]
 position = Vector2(250, 570)
 amount = 3
@@ -106,6 +124,9 @@ price = 5
 
 [node name="Sprite2D" parent="Tulip" index="0"]
 texture = ExtResource("6_nwabw")
+
+[node name="Area" parent="Tulip/DraggableComponent" index="0"]
+shape = SubResource("RectangleShape2D_yqlge")
 
 [node name="Water" parent="." instance=ExtResource("7_0amaj")]
 position = Vector2(448, 580)
@@ -219,5 +240,8 @@ scene = "res://Scenes/shop.tscn"
 [connection signal="pressed" from="UI/Button" to="UI/Button" method="_on_pressed"]
 
 [editable path="Daisy"]
+[editable path="Daisy/DraggableComponent"]
 [editable path="Buttercup"]
+[editable path="Buttercup/DraggableComponent"]
 [editable path="Tulip"]
+[editable path="Tulip/DraggableComponent"]

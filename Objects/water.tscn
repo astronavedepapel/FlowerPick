@@ -3,19 +3,20 @@
 [ext_resource type="Texture2D" uid="uid://cesq0cmxmk83j" path="res://Assets/Sprites/water.png" id="2_ii0a6"]
 [ext_resource type="PackedScene" uid="uid://dk8gw62qrccoy" path="res://Nodes/Draggable.tscn" id="2_oc8gr"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3v5y3"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5m1a0"]
+resource_local_to_scene = true
 size = Vector2(52, 52)
 
 [node name="Water" type="Node2D" groups=["water"]]
 
-[node name="DraggableComponent" parent="." instance=ExtResource("2_oc8gr")]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DraggableComponent"]
-shape = SubResource("RectangleShape2D_3v5y3")
-
-[node name="Sprite2D" type="Sprite2D" parent="DraggableComponent"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_ii0a6")
+
+[node name="DraggableComponent" parent="." instance=ExtResource("2_oc8gr")]
+
+[node name="Area" parent="DraggableComponent" index="0"]
+shape = SubResource("RectangleShape2D_5m1a0")
 
 [node name="Label" type="Label" parent="."]
 visible = false
@@ -23,3 +24,5 @@ offset_left = 18.0
 offset_top = 22.0
 offset_right = 58.0
 offset_bottom = 45.0
+
+[editable path="DraggableComponent"]
