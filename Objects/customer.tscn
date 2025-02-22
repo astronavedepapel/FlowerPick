@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://tlpob0r2u6vt"]
+
+[ext_resource type="Script" path="res://Scripts/customer.gd" id="1_5u61f"]
+[ext_resource type="Texture2D" uid="uid://m62pioo7mlfn" path="res://Assets/Sprites/shadow.png" id="2_6abgu"]
+[ext_resource type="Texture2D" uid="uid://b2pjfmumdj6dl" path="res://Assets/Sprites/customer1.png" id="3_cobli"]
+[ext_resource type="Texture2D" uid="uid://b3o0kpfppp6qd" path="res://Assets/Sprites/question mark.png" id="4_fbo4b"]
+
+[node name="Customer" type="Node2D"]
+script = ExtResource("1_5u61f")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+position = Vector2(61, 290)
+texture = ExtResource("2_6abgu")
+
+[node name="Body" type="Sprite2D" parent="."]
+texture = ExtResource("3_cobli")
+centered = false
+
+[node name="QuestionMark" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+position = Vector2(56, 41)
+texture = ExtResource("4_fbo4b")

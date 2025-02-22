@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://b3dg5vs168vh5"]
+
+[ext_resource type="Script" path="res://Scripts/order.gd" id="1_vbocj"]
+[ext_resource type="Texture2D" uid="uid://bj0hmihxjq6dt" path="res://Assets/Sprites/shelf.png" id="1_xd6ho"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6nblx"]
+size = Vector2(215, 157)
+
+[sub_resource type="Animation" id="Animation_2okkg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_an1nq"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r1ooq"]
+_data = {
+"RESET": SubResource("Animation_2okkg"),
+"fade": SubResource("Animation_an1nq")
+}
+
+[node name="Order" type="Area2D"]
+script = ExtResource("1_vbocj")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(1.4527, 0.280859)
+texture = ExtResource("1_xd6ho")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(107.5, 78.5)
+shape = SubResource("RectangleShape2D_6nblx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_r1ooq")
+}
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://tsy1klep4wkl"]
+[gd_scene load_steps=10 format=3 uid="uid://tsy1klep4wkl"]
 
 [ext_resource type="Script" path="res://Scripts/shop.gd" id="1_ey6x5"]
-[ext_resource type="Texture2D" uid="uid://bmuxchiuwxdf7" path="res://Assets/Sprites/background.jpg" id="2_gwhb5"]
-[ext_resource type="Script" path="res://Scripts/navigation.gd" id="2_x4q6q"]
+[ext_resource type="Texture2D" uid="uid://bmuxchiuwxdf7" path="res://Assets/Background/background.jpg" id="2_igcra"]
 [ext_resource type="PackedScene" uid="uid://dcx5ubu0cm2nd" path="res://Objects/shop_item.tscn" id="3_y3c2f"]
 [ext_resource type="Texture2D" uid="uid://cu8hmdkdey42s" path="res://Assets/Sprites/seed2.png" id="4_jfyea"]
 [ext_resource type="Texture2D" uid="uid://wcf7gv30jp5j" path="res://Assets/Sprites/seed3.png" id="5_vrhj2"]
@@ -20,7 +19,8 @@ script = ExtResource("1_ey6x5")
 offset = Vector2(225, 315)
 
 [node name="Background" type="Sprite2D" parent="."]
-texture = ExtResource("2_gwhb5")
+modulate = Color(0.737255, 0, 0.411765, 1)
+texture = ExtResource("2_igcra")
 offset = Vector2(250, 315)
 
 [node name="BuyVase" parent="." groups=["upgrades"] instance=ExtResource("3_y3c2f")]
@@ -54,6 +54,7 @@ itemType = "seed"
 texture = ExtResource("5_vrhj2")
 
 [node name="UI" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1.0
@@ -147,17 +148,6 @@ offset_top = 12.0
 offset_right = 487.0
 offset_bottom = 35.0
 text = "$ 0"
-
-[node name="Button" type="Button" parent="UI"]
-layout_mode = 0
-offset_left = -50.0
-offset_top = -1.0
-offset_right = -1.0
-offset_bottom = 629.0
-script = ExtResource("2_x4q6q")
-scene = "res://Scenes/nursery.tscn"
-
-[connection signal="pressed" from="UI/Button" to="UI/Button" method="_on_pressed"]
 
 [editable path="BuyVase"]
 [editable path="BuySeed2"]

@@ -7,6 +7,9 @@ var seedType
 
 func _ready():
 	randomize()
+	refresh()
+
+func refresh():
 	if itemType == "seed": # If item is a seed, choose a random seed type
 		var picker = randi_range(1, 3)
 		match picker:

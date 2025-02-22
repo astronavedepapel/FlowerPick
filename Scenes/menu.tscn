@@ -1,63 +1,158 @@
-[gd_scene load_steps=9 format=3 uid="uid://csnd8clojovgo"]
+[gd_scene load_steps=19 format=3 uid="uid://csnd8clojovgo"]
 
-[ext_resource type="Script" path="res://menu.gd" id="1_i300p"]
-[ext_resource type="Texture2D" uid="uid://bsv5odmr8is10" path="res://Assets/Sprites/bg-blooming-2.png" id="2_h8ofo"]
-[ext_resource type="FontFile" uid="uid://b140s7uqclbem" path="res://Assets/Fonts/Coopers Town.otf" id="3_8aibu"]
-[ext_resource type="FontFile" uid="uid://m46nfgev8f85" path="res://Assets/Fonts/introheadr-base.otf" id="4_nliic"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cr6n6"]
-texture = ExtResource("2_h8ofo")
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_h3mdl"]
+[ext_resource type="Texture2D" uid="uid://c8kp36w0lyprx" path="res://Assets/Background/bg menu tile small.png" id="2_6vb3e"]
+[ext_resource type="Texture2D" uid="uid://dod5kkbumg3rr" path="res://Assets/Background/logo.png" id="3_el1e5"]
+[ext_resource type="Texture2D" uid="uid://bqewmiotqaofk" path="res://Assets/Background/frô.png" id="4_ag4n4"]
+[ext_resource type="FontFile" uid="uid://bx736il2ao5k2" path="res://Assets/Fonts/introheadr-base.otf" id="4_nliic"]
+[ext_resource type="FontFile" uid="uid://tcfc66148lha" path="res://Assets/Fonts/Ganache Regular.ttf" id="4_rluc1"]
+[ext_resource type="Texture2D" uid="uid://nh8fyxcholkw" path="res://Assets/UI/back arrow.png" id="7_1xaik"]
+[ext_resource type="Texture2D" uid="uid://oegllmfsh2bh" path="res://Assets/UI/back arrow press.png" id="8_gajpq"]
+[ext_resource type="Texture2D" uid="uid://d3wncg7ka1w72" path="res://Assets/UI/back arrow hover.png" id="9_xs4dm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rrfnq"]
-bg_color = Color(0.32549, 0.756863, 0.745098, 1)
+bg_color = Color(0.678431, 0.356863, 0.635294, 1)
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
-border_width_bottom = 4
-border_color = Color(0.207843, 0.443137, 0.462745, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-expand_margin_top = 10.0
-expand_margin_bottom = 10.0
+border_width_bottom = 10
+border_color = Color(0.6, 0.270588, 0.482353, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 shadow_color = Color(0, 0, 0, 0.160784)
 shadow_size = 2
-shadow_offset = Vector2(0, 1)
+shadow_offset = Vector2(8, 8)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ry76b"]
-bg_color = Color(0.258824, 0.65098, 0.643137, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ojj4e"]
+bg_color = Color(0.827451, 0.54902, 0.788235, 1)
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
-border_width_bottom = 4
-border_color = Color(0.14902, 0.337255, 0.352941, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-expand_margin_top = 10.0
-expand_margin_bottom = 10.0
+border_width_bottom = 10
+border_color = Color(0.760784, 0.392157, 0.623529, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 shadow_color = Color(0, 0, 0, 0.160784)
 shadow_size = 2
-shadow_offset = Vector2(0, 1)
+shadow_offset = Vector2(8, 8)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yut2u"]
-bg_color = Color(0.258824, 0.65098, 0.643137, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(0.14902, 0.337255, 0.352941, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-expand_margin_top = 10.0
-expand_margin_bottom = 10.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oq4ww"]
+bg_color = Color(0.533333, 0.254902, 0.494118, 1)
+border_width_top = 10
+border_color = Color(0.592157, 0.290196, 0.54902, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 shadow_color = Color(0, 0, 0, 0.160784)
 shadow_size = 2
-shadow_offset = Vector2(0, 1)
+shadow_offset = Vector2(8, 8)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_facqt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t7qg0"]
+bg_color = Color(0, 0, 0, 0.564706)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.970602, 0.970602, 0.970602, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="Animation" id="Animation_oh73q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_sa35v"]
+resource_name = "fade in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_ebmk4"]
+resource_name = "fade out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yobub"]
+_data = {
+"RESET": SubResource("Animation_oh73q"),
+"fade in": SubResource("Animation_sa35v"),
+"fade out": SubResource("Animation_ebmk4")
+}
 
 [node name="menu" type="Control"]
 layout_mode = 3
@@ -66,85 +161,327 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_i300p")
+script = ExtResource("1_h3mdl")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="BGcolor" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_cr6n6")
+color = Color(1, 0.721569, 0.4, 1)
 
-[node name="Label" type="Label" parent="."]
+[node name="BGmoving" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -63.0
+offset_right = 190.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_6vb3e")
+expand_mode = 5
+stretch_mode = 1
+flip_h = true
+
+[node name="Main" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Logo" type="Sprite2D" parent="Main"]
+visible = false
+position = Vector2(627.599, 190.5)
+scale = Vector2(0.594231, 0.594231)
+texture = ExtResource("3_el1e5")
+
+[node name="Frô" type="Sprite2D" parent="Main"]
+position = Vector2(397, 182.386)
+rotation = 0.488081
+texture = ExtResource("4_ag4n4")
+
+[node name="Title" type="Label" parent="Main"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -356.5
-offset_top = 101.0
-offset_right = 356.5
-offset_bottom = 260.0
+offset_left = -365.0
+offset_top = 0.386124
+offset_right = 348.0
+offset_bottom = 405.386
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.176471)
-theme_override_colors/font_outline_color = Color(0.203922, 0.388235, 0.372549, 1)
+theme_override_colors/font_outline_color = Color(0.6, 0.270588, 0.482353, 1)
 theme_override_constants/shadow_offset_y = 15
 theme_override_constants/outline_size = 55
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("3_8aibu")
-theme_override_font_sizes/font_size = 100
+theme_override_fonts/font = ExtResource("4_rluc1")
+theme_override_font_sizes/font_size = 200
 text = "Blooming!"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="Options" type="VBoxContainer" parent="Main"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.488
+anchor_top = 0.5
+anchor_right = 0.488
+anchor_bottom = 0.5
+offset_left = -147.64
+offset_top = 34.0
+offset_right = 147.36
+offset_bottom = 276.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Start" type="Button" parent="Main/Options"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_nliic")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_rrfnq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ojj4e")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oq4ww")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_facqt")
+text = "Iniciar"
+
+[node name="Controls" type="Button" parent="Main/Options"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_nliic")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_rrfnq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ojj4e")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oq4ww")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_facqt")
+text = "Controles"
+
+[node name="Credits" type="Button" parent="Main/Options"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_nliic")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_rrfnq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ojj4e")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oq4ww")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_facqt")
+text = "Créditos"
+
+[node name="Exit" type="Button" parent="Main/Options"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_nliic")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_rrfnq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ojj4e")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oq4ww")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_facqt")
+text = "Sair"
+
+[node name="Controls" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Controls"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -175.5
-offset_top = -23.0
-offset_right = 175.5
-offset_bottom = 236.0
+offset_left = -501.0
+offset_top = -302.0
+offset_right = 486.0
+offset_bottom = 302.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 35
+theme_override_styles/panel = SubResource("StyleBoxFlat_t7qg0")
 
-[node name="Button" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_nliic")
-theme_override_font_sizes/font_size = 45
-theme_override_styles/normal = SubResource("StyleBoxFlat_rrfnq")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ry76b")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_yut2u")
-text = "Iniciar"
+[node name="tittle" type="Label" parent="Controls/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -104.5
+offset_top = 40.0
+offset_right = 104.5
+offset_bottom = 93.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 36
+text = "Como jogar:"
 
-[node name="Button2" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_nliic")
-theme_override_font_sizes/font_size = 45
-theme_override_styles/normal = SubResource("StyleBoxFlat_rrfnq")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ry76b")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ry76b")
-text = "Créditos"
+[node name="1" type="Label" parent="Controls/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -437.5
+offset_top = -194.0
+offset_right = -58.5
+offset_bottom = -119.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "Arraste as sementes e água até os vasos para fazer suas flores crescerem."
+horizontal_alignment = 1
+autowrap_mode = 2
 
-[node name="Button3" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_nliic")
-theme_override_font_sizes/font_size = 45
-theme_override_styles/normal = SubResource("StyleBoxFlat_rrfnq")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ry76b")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ry76b")
-text = "Sair"
+[node name="2" type="Label" parent="Controls/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 66.5
+offset_top = -194.0
+offset_right = 445.5
+offset_bottom = -119.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "Quando elas desabrocharem, não esqueça de colhê-las!"
+horizontal_alignment = 1
+autowrap_mode = 2
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_creditos_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_sair_pressed"]
+[node name="3" type="Label" parent="Controls/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -437.5
+offset_top = 44.0
+offset_right = -58.5
+offset_bottom = 119.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "Quando for de tarde, é hora de vender as flores que você plantou."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="4" type="Label" parent="Controls/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 65.5
+offset_top = 44.0
+offset_right = 446.5
+offset_bottom = 119.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "Arraste suas flores até os pedidos e forme o máximo de buquês possível!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Credits" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Credits"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -420.0
+offset_top = -286.5
+offset_right = 405.0
+offset_bottom = 286.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_t7qg0")
+
+[node name="Label" type="Label" parent="Credits/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -77.5
+offset_top = 40.0
+offset_right = 78.5
+offset_bottom = 93.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 36
+text = "Créditos:"
+
+[node name="Label2" type="Label" parent="Credits/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -108.0
+offset_right = 104.0
+offset_bottom = 109.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "Criado por:
+- (Amane)
+- André
+- Ester
+- Sofia
+
+Para a Ludorama Jam"
+
+[node name="Back" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 40.0
+offset_right = 115.0
+offset_bottom = 89.0
+texture_normal = ExtResource("7_1xaik")
+texture_pressed = ExtResource("8_gajpq")
+texture_hover = ExtResource("9_xs4dm")
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Fade")
+libraries = {
+"": SubResource("AnimationLibrary_yobub")
+}
+
+[node name="Fade" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 0)
+
+[connection signal="pressed" from="Main/Options/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Main/Options/Controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="Main/Options/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Main/Options/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
